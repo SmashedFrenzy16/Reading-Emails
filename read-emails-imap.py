@@ -8,6 +8,7 @@ password = input("Enter password: ")
 imap = imaplib.IMAP4_SSL(host)
 
 imap.login(username, password)
+
 imap.select('Inbox')
 
 tmp, data = imap.search(None, 'ALL')
